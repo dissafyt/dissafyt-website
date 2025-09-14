@@ -8,7 +8,6 @@ module.exports = {
     "./src/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -52,10 +51,17 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        blue: {
+        "ocr-blue": {
+          50: "#e6f3ff",
+          100: "#b3d9ff",
+          200: "#80bfff",
+          300: "#4da6ff",
+          400: "#1a8cff",
           500: "#0077b8",
-          600: "#005a8a",
-          100: "#e6f3ff",
+          600: "#005c8f",
+          700: "#004166",
+          800: "#00263d",
+          900: "#000b14",
         },
       },
       borderRadius: {
@@ -65,12 +71,12 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
+          from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          to: { height: 0 },
         },
       },
       animation: {

@@ -6,9 +6,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Dissafyt - Transform Your Business with Smart Solutions",
-  description:
-    "Innovative software solutions and expert consultation to optimize your business operations and drive sustainable growth.",
+  title: "Dissafyt - Business Transformation Solutions",
+  description: "Transform your business with expert consulting and innovative software solutions",
     generator: 'v0.app'
 }
 

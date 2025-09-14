@@ -1,19 +1,23 @@
 "use client"
 
-import Link from "next/link"
 import { useState } from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
-export default function Header() {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-sm">
+    <header className="bg-white shadow-sm border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-orange-500">
-            Dissafyt
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">D</span>
+            </div>
+            <span className="text-xl font-bold text-gray-900">Dissafyt</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -33,24 +37,25 @@ export default function Header() {
             <Link href="/contact" className="text-gray-700 hover:text-orange-500 transition-colors">
               Contact
             </Link>
-            <Link
-              href="/get-started"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors"
-            >
-              Get Started
-            </Link>
           </nav>
 
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Link href="/get-started">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white">Get Started</Button>
+            </Link>
+          </div>
+
           {/* Mobile Menu Button */}
-          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
+          <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden py-4 border-t">
+            <nav className="flex flex-col space-y-4">
               <Link
                 href="/"
                 className="text-gray-700 hover:text-orange-500 transition-colors"
@@ -86,15 +91,11 @@ export default function Header() {
               >
                 Contact
               </Link>
-              <Link
-                href="/get-started"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors text-center"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Started
+              <Link href="/get-started" onClick={() => setIsMenuOpen(false)}>
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full">Get Started</Button>
               </Link>
-            </div>
-          </nav>
+            </nav>
+          </div>
         )}
       </div>
     </header>

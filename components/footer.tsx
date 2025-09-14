@@ -1,52 +1,48 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin } from "lucide-react"
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold text-orange-500 mb-4">Dissafyt</h3>
-            <p className="text-gray-300 mb-4">
-              Transforming businesses with innovative software solutions and expert consultation.
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">D</span>
+              </div>
+              <span className="text-xl font-bold">Dissafyt</span>
+            </div>
+            <p className="text-gray-400 mb-4">
+              Transforming businesses through expert consulting and innovative software solutions.
             </p>
-            <div className="flex items-center mb-2">
-              <Mail className="h-4 w-4 mr-2" />
-              <span className="text-sm">info@dissafyt.com</span>
-            </div>
-            <div className="flex items-center mb-2">
-              <Phone className="h-4 w-4 mr-2" />
-              <span className="text-sm">+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center">
-              <MapPin className="h-4 w-4 mr-2" />
-              <span className="text-sm">Business City, BC</span>
+            <div className="text-gray-400">
+              <p>📧 info@dissafyt.com</p>
+              <p>📞 +27 (0) 11 123 4567</p>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2 text-gray-400">
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   Business Consultation
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   Systems Analysis
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   Systems Design
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-orange-500 transition-colors">
+                <Link href="/services" className="hover:text-white transition-colors">
                   Internal Audit
                 </Link>
               </li>
@@ -55,62 +51,41 @@ export default function Footer() {
 
           {/* Software */}
           <div>
-            <h4 className="font-semibold mb-4">Software</h4>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-lg font-semibold mb-4">Software</h3>
+            <ul className="space-y-2 text-gray-400">
               <li>
-                <Link
-                  href="/software/ocr-waybill-scanner"
-                  className="text-gray-300 hover:text-orange-500 transition-colors"
-                >
+                <Link href="/software/ocr-waybill-scanner" className="hover:text-white transition-colors">
                   OCR Waybill Scanner
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/software/nwata-ethical-productivity"
-                  className="text-gray-300 hover:text-orange-500 transition-colors"
-                >
+                <Link href="/software/nwata-ethical-productivity" className="hover:text-white transition-colors">
                   Nwata - Ethical Productivity
-                </Link>
-              </li>
-              <li>
-                <Link href="/software" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  View All Software
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Company */}
           <div>
-            <h4 className="font-semibold mb-4">Support</h4>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 text-gray-400">
               <li>
-                <Link href="/documentation" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  Documentation
+                <Link href="/about" className="hover:text-white transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy-policy" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms-of-service" className="text-gray-300 hover:text-orange-500 transition-colors">
-                  Terms of Service
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Dissafyt. All rights reserved.</p>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Dissafyt. All rights reserved.</p>
         </div>
       </div>
     </footer>
