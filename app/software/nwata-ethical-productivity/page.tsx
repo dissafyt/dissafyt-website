@@ -1,5 +1,5 @@
-import Header from "@/components/header"
-import Footer from "@/components/footer"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import Link from "next/link"
 import { ExternalLink, Activity, Shield, Users, BarChart3, Gamepad2, Database } from "lucide-react"
 
