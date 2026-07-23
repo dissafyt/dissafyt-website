@@ -107,72 +107,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Software Solutions */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Innovative Software Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Cutting-edge tools designed to streamline your operations and boost productivity.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-2xl">OCR Waybill Scanner</CardTitle>
-                <CardDescription>Automated document processing for logistics and shipping</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    Instant waybill data extraction
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    99% accuracy rate
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    Real-time processing
-                  </li>
-                </ul>
-                <Link href="/software/ocr-waybill-scanner">
-                  <Button className="w-full">Learn More</Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-2xl">Nwata - Ethical Productivity</CardTitle>
-                <CardDescription>Gamified productivity intelligence for modern workplaces</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    Entropy of effort measurement
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    Privacy-first design
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    Gamified engagement
-                  </li>
-                </ul>
-                <Link href="/software/nwata-ethical-productivity">
-                  <Button className="w-full">Learn More</Button>
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-orange-500">
         <div className="container mx-auto px-4 text-center">
@@ -186,13 +120,13 @@ export default function HomePage() {
                 Contact Us Today
               </Button>
             </Link>
-            <Link href="/software">
+            <Link href="/services">
               <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-orange-500 px-8 py-3 bg-transparent"
               >
-                View Our Software
+                Explore Services
               </Button>
             </Link>
           </div>

@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
@@ -44,23 +44,6 @@ export function Footer() {
               <li>
                 <Link href="/services" className="hover:text-white transition-colors">
                   Internal Audit
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Software */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Software</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/software/ocr-waybill-scanner" className="hover:text-white transition-colors">
-                  OCR Waybill Scanner
-                </Link>
-              </li>
-              <li>
-                <Link href="/software/nwata-ethical-productivity" className="hover:text-white transition-colors">
-                  Nwata - Ethical Productivity
                 </Link>
               </li>
             </ul>

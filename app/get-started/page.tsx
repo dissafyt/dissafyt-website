@@ -83,10 +83,10 @@ export default function GetStartedPage() {
               </div>
 
               <Link
-                href="/software"
+                href="/contact"
                 className="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-flex items-center justify-center"
               >
-                Explore Software <ArrowRight className="ml-2 h-4 w-4" />
+                Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </div>
 

@@ -31,9 +31,6 @@ export function Header() {
             <Link href="/services" className="text-gray-700 hover:text-orange-500 transition-colors">
               Services
             </Link>
-            <Link href="/software" className="text-gray-700 hover:text-orange-500 transition-colors">
-              Software
-            </Link>
             <Link href="/contact" className="text-gray-700 hover:text-orange-500 transition-colors">
               Contact
             </Link>
@@ -76,13 +73,6 @@ export function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Services
-              </Link>
-              <Link
-                href="/software"
-                className="text-gray-700 hover:text-orange-500 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Software
               </Link>
               <Link
                 href="/contact"
