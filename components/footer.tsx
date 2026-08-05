@@ -1,91 +1,73 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="border-t border-border bg-background">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Company Info */}
+        <div className="grid gap-8 md:grid-cols-3">
+          {/* Brand */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">D</span>
-              </div>
-              <span className="text-xl font-bold">Dissafyt</span>
-            </div>
-            <p className="text-gray-400 mb-4">
-              Transforming businesses through expert consulting and innovative software solutions.
+            <Link href="#top" className="flex items-center">
+              <Image
+                src="/images/dissafyt-logo.png"
+                alt="Dissafyt"
+                width={160}
+                height={62}
+                className="h-10 w-auto invert"
+              />
+              <span className="sr-only">Dissafyt Cuts</span>
+            </Link>
+            <p className="mt-4 max-w-xs text-sm text-muted-foreground">
+              Monthly haircut subscriptions that keep you sharp. No contracts, no queues, no surprises.
             </p>
-            <div className="text-gray-400">
-              <p>📧 info@dissafyt.com</p>
-              <p>📞 +27 (0) 11 123 4567</p>
-            </div>
           </div>
 
-          {/* Services */}
+          {/* Explore */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2 text-gray-400">
+            <h3 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wide text-foreground">Explore</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Business Consultation
+                <Link href="#plans" className="hover:text-foreground transition-colors">
+                  Plans
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Systems Analysis
+                <Link href="#how-it-works" className="hover:text-foreground transition-colors">
+                  How it works
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Systems Design
+                <Link href="#faq" className="hover:text-foreground transition-colors">
+                  FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors">
-                  Internal Audit
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Software */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Software</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/software/ocr-waybill-scanner" className="hover:text-white transition-colors">
-                  OCR Waybill Scanner
-                </Link>
-              </li>
-              <li>
-                <Link href="/software/nwata-ethical-productivity" className="hover:text-white transition-colors">
-                  Nwata - Ethical Productivity
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <Link href="/about" className="hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-white transition-colors">
+                <Link href="#contact" className="hover:text-foreground transition-colors">
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wide text-foreground">
+              Get in touch
+            </h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a href="mailto:letstalk@dissafyt.com" className="hover:text-foreground transition-colors">
+                  letstalk@dissafyt.com
+                </a>
+              </li>
+              <li>South Africa</li>
+            </ul>
+          </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Dissafyt. All rights reserved.</p>
+        <div className="mt-10 border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Dissafyt Cuts. All rights reserved.</p>
         </div>
       </div>
     </footer>

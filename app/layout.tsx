@@ -1,14 +1,20 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Oswald } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" })
 
 export const metadata: Metadata = {
-  title: "Dissafyt - Business Transformation Solutions",
-  description: "Transform your business with expert consulting and innovative software solutions",
-    generator: 'v0.app'
+  title: "Dissafyt Cuts — Haircut Subscriptions in South Africa",
+  description:
+    "Fresh cuts, every month. Simple haircut subscription plans from R100/month, including father-and-son combo cuts. Look sharp without the hassle.",
+  generator: "v0.app",
+}
+
+export const viewport = {
+  themeColor: "#0f0d0b",
 }
 
 export default function RootLayout({
@@ -17,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`dark ${inter.variable} ${oswald.variable}`}>
+      <body className="bg-background font-sans">{children}</body>
     </html>
   )
 }
