@@ -32,8 +32,8 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const name = String(body.name ?? "").trim()
     const email = String(body.email ?? "").trim()
-    const company = String(body.company ?? "").trim()
-    const service = String(body.service ?? "").trim()
+    const phone = String(body.phone ?? "").trim()
+    const plan = String(body.plan ?? "").trim()
     const message = String(body.message ?? "").trim()
 
     if (!name || !email || !message) {
@@ -48,8 +48,8 @@ export async function POST(request: NextRequest) {
       ["Name", name],
       ["Email", email],
     ]
-    if (company) rows.push(["Company", company])
-    if (service) rows.push(["Service", service])
+    if (phone) rows.push(["Phone", phone])
+    if (plan) rows.push(["Plan of interest", plan])
 
     const detailsHtml = rows
       .map(
@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
       from: FROM_EMAIL,
       to: [TO_EMAIL],
       replyTo: email,
-      subject: `New enquiry from ${name}${company ? ` (${company})` : ""}`,
+      subject: `New enquiry from ${name}${plan ? ` — ${plan}` : ""}`,
       html,
       text,
     })
