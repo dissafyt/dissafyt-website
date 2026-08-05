@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Scissors } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,13 +8,15 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link href="#top" className="flex items-center space-x-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-                <Scissors className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="font-heading text-xl font-bold uppercase tracking-wide text-foreground">
-                Dissafyt Cuts
-              </span>
+            <Link href="#top" className="flex items-center">
+              <Image
+                src="/images/dissafyt-logo.png"
+                alt="Dissafyt"
+                width={160}
+                height={62}
+                className="h-10 w-auto invert"
+              />
+              <span className="sr-only">Dissafyt Cuts</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
               Monthly haircut subscriptions that keep you sharp. No contracts, no queues, no surprises.

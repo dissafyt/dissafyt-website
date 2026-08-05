@@ -2,8 +2,9 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Scissors } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 const navLinks = [
   { href: "#plans", label: "Plans" },
@@ -20,13 +21,16 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="#top" className="flex items-center space-x-2">
-            <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center">
-              <Scissors className="h-5 w-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-heading font-bold uppercase tracking-wide text-foreground">
-              Dissafyt Cuts
-            </span>
+          <Link href="#top" className="flex items-center">
+            <Image
+              src="/images/dissafyt-logo.png"
+              alt="Dissafyt"
+              width={140}
+              height={54}
+              priority
+              className="h-9 w-auto invert"
+            />
+            <span className="sr-only">Dissafyt Cuts</span>
           </Link>
 
           {/* Desktop Navigation */}
